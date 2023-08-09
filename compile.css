@@ -1,0 +1,114 @@
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  
+body {
+  background: #131313
+}
+
+header {
+  position: fixed;  
+   /* position: absolute;  */
+  /* right: 0; */
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  /*background: transparent;  */
+  /*background: linear-gradient(245.59deg,  red 28.53%, #131313 75.52%); */
+  background: hsl(280, 7%, 8%);
+}
+
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(235, 16, 16);
+}
+
+
+
+
+
+/* Lazy Load Styles */
+.card-image {
+	display: block;
+	min-height: 20rem; /* layout hack */
+	background: #000000 center center no-repeat;
+	background-size: cover;
+	filter: blur(3px); /* blur the lowres image */
+}
+
+.card-image > img {
+	display: block;
+	width: 100%;
+	opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+}
+
+
+
+
+/* Layout Styles */
+/* html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+} */
+
+.card-list {
+	display: block;
+	margin: 20rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.card {
+	display: inline-block;
+	width: 90%;
+	max-width: 20rem;
+	margin: 2rem;
+	font-size: 0.8rem;
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: 0 0 3rem -1rem rgba(214, 9, 9, 0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	padding: 1em 0.5em;
+	color: white;
+	text-decoration: none;
+}
+
+.card-description > h2 {
+	margin: 0 0 0.5em;
+}
+
+.card-description > p {
+	margin: 0;
+}
